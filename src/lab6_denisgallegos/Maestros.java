@@ -11,9 +11,11 @@ public class Maestros extends Personas{
     private ArrayList clases = new ArrayList();
 
     public Maestros() {
+        super();
     }
 
-    public Maestros(double salario) {
+    public Maestros(double salario, String nombre, String apellido, int edad, String genero) {
+        super(nombre, apellido, edad, genero);
         this.salario = salario;
     }
     
