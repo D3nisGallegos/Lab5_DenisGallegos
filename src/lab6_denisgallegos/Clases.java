@@ -5,7 +5,7 @@ package lab6_denisgallegos;
 public class Clases {
     
     private String nombre; 
-    private int seccion; 
+    private String seccion; 
     private int edificio; 
     private int salon; 
     private String aire; 
@@ -13,7 +13,7 @@ public class Clases {
     public Clases() {
     }
 
-    public Clases(String nombre, int seccion, int edificio, int salon, String aire) {
+    public Clases(String nombre, String seccion, int edificio, int salon, String aire) {
         this.nombre = nombre;
         this.seccion = seccion;
         this.edificio = edificio;
@@ -30,11 +30,11 @@ public class Clases {
         this.nombre = nombre;
     }
 
-    public int getSeccion() {
+    public String getSeccion() {
         return seccion;
     }
 
-    public void setSeccion(int seccion) {
+    public void setSeccion(String seccion) {
         this.seccion = seccion;
     }
 
