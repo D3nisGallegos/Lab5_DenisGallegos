@@ -115,6 +115,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jPopupMenu3 = new javax.swing.JPopupMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -176,6 +179,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
+        panel2 = new java.awt.Panel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
 
         jPopupMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -241,6 +247,28 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPopupMenu2.add(jMenuItem6);
+
+        jPopupMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPopupMenu3MouseClicked(evt);
+            }
+        });
+
+        jMenuItem7.setText("Modificar");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jPopupMenu3.add(jMenuItem7);
+
+        jMenuItem8.setText("Eliminar");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jPopupMenu3.add(jMenuItem8);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -599,7 +627,6 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel20)
                         .addGap(120, 120, 120))))
             .addGroup(panel1Layout.createSequentialGroup()
@@ -669,6 +696,72 @@ public class Principal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Menu Estudiantes", panel1);
+
+        panel2.setBackground(new java.awt.Color(255, 153, 153));
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("JTree");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Facultades");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Ingenieria");
+        javax.swing.tree.DefaultMutableTreeNode treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Sistemas. comp");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Energia");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Industrial");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Mecatronica");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Biomedica");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Licenciatura");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Derecho");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Finanzas");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Admin.Empresas");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Mercadotecnia");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Disenio Grafico");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Salud");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medicina");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Odontologia");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Terapia");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Nutricion");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTree1MouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(jTree1);
+
+        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
+        panel2.setLayout(panel2Layout);
+        panel2Layout.setHorizontalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel2Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        panel2Layout.setVerticalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel2Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Arbol", panel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -747,7 +840,7 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         if (jList1.getSelectedIndex() >= 0){
             DefaultListModel modelo = (DefaultListModel) jList1.getModel();
-            Maestros objeto = (Maestros) (modelo.get(jList1.getSelectedIndex()));
+            Maestros objeto = ((Maestros) modelo.get(jList1.getSelectedIndex()));
             jTextField1.setText(objeto.getNombre() +"");
             jTextField2.setText(objeto.getApellido()+"");
             jTextField3.setText(objeto.getSalario()+"");
@@ -810,18 +903,22 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-            String nombre = jTextField8.getText();
-            String apellido = jTextField9.getText();
-            int edad = Integer.parseInt(jSpinner2.getValue()+"");
-            int numcuenta = generarcenta();
-            String genero = jComboBox3.getSelectedItem().toString();
-            Estudiantes objeto = new Estudiantes(numcuenta, nombre, apellido, edad, genero);
-            DefaultListModel mode = (DefaultListModel) jList3.getModel();
-            mode.addElement(objeto.toStringEstudiantes2());
-            jList3.setModel(mode);
-            jTextField8.setText("");
-            jTextField9.setText("");
-            jComboBox3.setSelectedIndex(0);
+            if (jList4.getMaxSelectionIndex() >= 0){           
+                String nombre = jTextField8.getText();
+                String apellido = jTextField9.getText();
+                int edad = Integer.parseInt(jSpinner2.getValue()+"");
+                int numcuenta = generarcenta();
+                String genero = jComboBox3.getSelectedItem().toString();
+                Estudiantes objeto = new Estudiantes(numcuenta, nombre, apellido, edad, genero);
+                DefaultListModel mode = (DefaultListModel) jList3.getModel();
+                mode.addElement(objeto.toStringEstudiantes2());
+                jList3.setModel(mode);
+                jTextField8.setText("");
+                jTextField9.setText("");
+                jComboBox3.setSelectedIndex(0);
+            }else {
+                JOptionPane.showMessageDialog(null, "No hay carreras ingresadas aun.", "Error", 0);
+            }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
@@ -856,6 +953,28 @@ public class Principal extends javax.swing.JFrame {
             jComboBox4.setSelectedIndex(0);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jPopupMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPopupMenu3MouseClicked
+        // 
+    }//GEN-LAST:event_jPopupMenu3MouseClicked
+
+    private void jTree1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree1MouseClicked
+        if (evt.isMetaDown() == true){
+            jPopupMenu3.show(evt.getComponent(), evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jTree1MouseClicked
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // MODIFICAR ESTUDIANTE
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        if (jList3.getSelectedIndex() >= 0){
+            DefaultListModel modelo = (DefaultListModel) jList3.getModel();
+            modelo.removeElementAt(jList4.getSelectedIndex());
+            jList3.setModel(modelo);
+        }
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -938,13 +1057,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -960,6 +1083,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTree jTree1;
     private java.awt.Panel panel1;
+    private java.awt.Panel panel2;
     // End of variables declaration//GEN-END:variables
 }
