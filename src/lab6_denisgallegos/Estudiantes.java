@@ -17,6 +17,11 @@ public class Estudiantes extends Personas{
         this.numcuenta = numcuenta;
         this.carrera = carrera;
     }
+    
+    public Estudiantes(int numcuenta, String nombre, String apellido, int edad, String genero) {
+        super(nombre, apellido, edad, genero);
+        this.numcuenta = numcuenta;
+    }
 
     //MUTADORES: 
     public int getNumcuenta() {
@@ -36,8 +41,8 @@ public class Estudiantes extends Personas{
     }
     
     //MA: 
-    public String toStringEstudiantes(){
-        return toStringPersonas()+"Cuenta: "+numcuenta+" "+carrera.toStringCarreras();
+    public String toStringEstudiantes2(){
+        return toStringPersonas()+", Cuenta: "+numcuenta;
     }
     
     
