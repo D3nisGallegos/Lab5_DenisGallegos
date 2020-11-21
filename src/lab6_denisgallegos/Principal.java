@@ -562,6 +562,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel27.setText("Todas las carreras: ");
 
         jList4.setModel(new DefaultListModel());
+        jList4.setEnabled(false);
         jScrollPane4.setViewportView(jList4);
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
@@ -903,7 +904,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-            if (jList4.getMaxSelectionIndex() >= 0){           
+            if (jList4.isEnabled() ){           
                 String nombre = jTextField8.getText();
                 String apellido = jTextField9.getText();
                 int edad = Integer.parseInt(jSpinner2.getValue()+"");
@@ -938,6 +939,7 @@ public class Principal extends javax.swing.JFrame {
         String n = jTextField11.getText()+"";
         boolean v = validar(n);
         if (v == true){
+            jList4.setEnabled(true);
             String nombre = jTextField10.getText();
             String facultad = jComboBox4.getSelectedItem().toString();
             String carrera = jComboBox5.getSelectedItem().toString();
